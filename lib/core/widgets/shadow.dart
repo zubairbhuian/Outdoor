@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 BoxShadow shadow1() {
   return BoxShadow(
-      blurRadius: 15,
+      blurRadius: 10,
       offset: Offset.zero,
       blurStyle: BlurStyle.outer,
-      color: Color.fromARGB(255, 0, 0, 0).withOpacity(.2));
+      color: Color.fromARGB(94, 112, 112, 112).withOpacity(.2));
 }

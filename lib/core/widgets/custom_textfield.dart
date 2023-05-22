@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 TextFormField textFormField({
   TextEditingController? controller,
@@ -16,6 +17,8 @@ TextFormField textFormField({
   EdgeInsetsGeometry? padding,
 }) {
   return TextFormField(
+    cursorColor: Color.fromARGB(0, 19, 19, 19),
+    cursorWidth: 2.w,
     controller: controller,
     validator: validator,
     obscureText: obscureText ?? false,
@@ -24,18 +27,20 @@ TextFormField textFormField({
     onTap: onTap,
     keyboardType: keyboardType,
     decoration: InputDecoration(
-        contentPadding:
-            padding ?? const EdgeInsets.only(bottom: 15.5, top: 15.5),
+        contentPadding: padding,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-        enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(80)),
-            borderSide: BorderSide(color: Colors.redAccent)),
-        focusedBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(80)),
-            borderSide: BorderSide(color: Colors.redAccent)),
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10.r)),
+            borderSide: const BorderSide(color: Color(0xffEFEFEF))),
+        focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10.r)),
+            borderSide: const BorderSide(color: Color(0xffEFEFEF))),
         hintText: hintText,
         label: label,
-        hintStyle: const TextStyle(color: Colors.redAccent, fontSize: 14)),
+        hintStyle: TextStyle(
+            color: const Color(0xff9AA0B4),
+            fontSize: 14.sp,
+            fontFamily: "SofiaProRegular")),
   );
 }

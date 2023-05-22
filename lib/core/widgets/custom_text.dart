@@ -7,14 +7,15 @@ Text regularText({
   Color? color,
   double? size,
   FontWeight? fontWeight,
-  TextAlign? textAlign
+  TextAlign? textAlign,
+  String? fontFamily
 
 }) {
   return Text(
     text,
     textAlign:textAlign ?? TextAlign.start,
     style:  TextStyle(
-        fontFamily: "Helveticaneue",
+        fontFamily:fontFamily?? "Helveticaneue",
         color:color ?? AppColors.textColor,
         fontSize:size ?? 12.sp,
         fontWeight:fontWeight ?? FontWeight.w400),
@@ -54,7 +55,7 @@ Text xLargeText({
     style:  TextStyle(
         fontFamily: "SofiaProBold",
         color:color ?? AppColors.titleColor,
-        fontSize:size ?? 12.sp,
+        fontSize:size ?? 30.sp,
         fontWeight:fontWeight ?? FontWeight.w400),
   );
 }

@@ -28,7 +28,10 @@ flutter:
     - assets/svg/
 
   fonts:
-    - family: SofiaPro
+    - family: SofiaProRegular
+      fonts:
+        - asset: fonts/SofiaProRegular.ttf
+    - family: SofiaProMedium
       fonts:
         - asset: fonts/SofiaProMedium.ttf
     - family: SofiaProSemiBold

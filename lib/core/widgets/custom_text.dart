@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:outdoor/core/utils/app_colors.dart';
 
 Text regularText({
   required String text,
@@ -14,7 +15,7 @@ Text regularText({
     textAlign:textAlign ?? TextAlign.start,
     style:  TextStyle(
         fontFamily: "Helveticaneue",
-        color:color ?? Colors.red,
+        color:color ?? AppColors.textColor,
         fontSize:size ?? 12.sp,
         fontWeight:fontWeight ?? FontWeight.w400),
   );
@@ -33,7 +34,7 @@ Text largeText({
     textAlign:textAlign ?? TextAlign.start,
     style:  TextStyle(
         fontFamily: "SofiaProSemiBold",
-        color:color ?? Colors.red,
+        color:color ??  AppColors.titleColor,
         fontSize:size ?? 12.sp,
         fontWeight:fontWeight ?? FontWeight.w400),
   );
@@ -52,7 +53,7 @@ Text xLargeText({
     textAlign:textAlign ?? TextAlign.start,
     style:  TextStyle(
         fontFamily: "SofiaProBold",
-        color:color ?? Colors.red,
+        color:color ?? AppColors.titleColor,
         fontSize:size ?? 12.sp,
         fontWeight:fontWeight ?? FontWeight.w400),
   );

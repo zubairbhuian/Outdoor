@@ -26,4 +26,7 @@ class ImgPath {
   static const String compass = 'assets/svg/compass.svg';
   static const String bag = 'assets/svg/bag.svg';
   static const String bell = 'assets/svg/bell.svg';
+  static const String usDollar = 'assets/svg/us-dollar.svg';
+  static const String angleRight = 'assets/svg/angle-right.svg';
+  // angle-right
 }

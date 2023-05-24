@@ -37,6 +37,9 @@ flutter:
     - family: SofiaProSemiBold
       fonts:
         - asset: fonts/SofiaProSemiBold.ttf
+    - family: SofiaProLight
+      fonts:
+        - asset: fonts/SofiaProLight.ttf
     - family: SofiaProBold
       fonts:
         - asset: fonts/SofiaProBold.ttf

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:outdoor/pages/application/application_view.dart';
-import 'package:outdoor/pages/welcome/welcome_view.dart';
+
+
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,6 @@ class MyApp extends StatelessWidget {
           title: 'Out Door',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            
             colorScheme: ColorScheme.fromSeed(
                 seedColor: const Color.fromARGB(255, 11, 11, 11)),
             useMaterial3: true,

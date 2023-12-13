@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:outdoor/app/core/services/base/preferences.dart';
+// import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
+// import 'package:outdoor/app/core/services/base/preferences.dart';
 // import 'package:outdoor/app/routes/app_pages.dart';
 
 // class RouteWlcomMiddleware extends GetMiddleware {

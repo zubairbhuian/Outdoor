@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           defaultTransition: Transition.cupertino,
           transitionDuration: const Duration(milliseconds: 500),
-          title: 'Netro Test',
+          title: 'OutDoor',
           theme: theme,
           initialBinding: BaseBinding(
             apiService: apiService,

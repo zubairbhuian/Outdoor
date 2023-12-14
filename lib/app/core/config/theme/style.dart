@@ -1,58 +1,57 @@
 import 'package:outdoor/app/core/config/theme/color.dart';
 import 'package:flutter/material.dart';
 
-
 // ******** Headline **********
-TextStyle kHeadlineLarge = const TextStyle(
+const TextStyle kHeadlineLarge = TextStyle(
   color: kTitleColor,
   fontSize: 32,
   fontWeight: FontWeight.w700,
 );
-TextStyle kHeadlineMedium = const TextStyle(
+const TextStyle kHeadlineMedium = TextStyle(
   color: kTitleColor,
   fontSize: 24,
   fontWeight: FontWeight.w700,
 );
-TextStyle headlineSmall = const TextStyle(
+const TextStyle headlineSmall = TextStyle(
   color: kTitleColor,
   fontSize: 18,
   fontWeight: FontWeight.w700,
 );
 // ******* title ***********
-TextStyle kTitleLarge = const TextStyle(
+const TextStyle kTitleLarge = TextStyle(
   color: kTextColor,
   fontSize: 20,
   fontWeight: FontWeight.w600,
 );
-TextStyle kTitleMedium = const TextStyle(
+const TextStyle kTitleMedium = TextStyle(
   color: kTitleColor,
   fontSize: 18,
   fontWeight: FontWeight.w600,
 );
-TextStyle kTitleSmall = const TextStyle(
+const TextStyle kTitleSmall = TextStyle(
   color: kTitleColor,
   fontSize: 16,
   fontWeight: FontWeight.w600,
 );
 // ******* body ********
-TextStyle kBodyLarge = const TextStyle(
-    color: kTextColor, fontSize: 16, fontWeight: FontWeight.w400);
-TextStyle kBodyMedium =
-    const TextStyle(color: kTextColor, fontSize: 14, fontWeight: FontWeight.w400);
-TextStyle kBodySmall =
-    const TextStyle(color: kTextColor, fontSize: 12, fontWeight: FontWeight.w400);
+const TextStyle kBodyLarge =
+    TextStyle(color: kTextColor, fontSize: 16, fontWeight: FontWeight.w400);
+const TextStyle kBodyMedium =
+    TextStyle(color: kTextColor, fontSize: 14, fontWeight: FontWeight.w400);
+const TextStyle kBodySmall =
+    TextStyle(color: kTextColor, fontSize: 12, fontWeight: FontWeight.w400);
 // label
-TextStyle kLabelLarge = const TextStyle(
+const TextStyle kLabelLarge = TextStyle(
   color: kTextColor,
   fontSize: 16,
   fontWeight: FontWeight.w600,
 );
-TextStyle kLabelMedium = const TextStyle(
+const TextStyle kLabelMedium = TextStyle(
   color: kTextColor,
   fontSize: 14,
   fontWeight: FontWeight.w600,
 );
-TextStyle kLabelSmall = const TextStyle(
+const TextStyle kLabelSmall = TextStyle(
   color: kTextColor,
   fontSize: 12,
   fontWeight: FontWeight.w600,

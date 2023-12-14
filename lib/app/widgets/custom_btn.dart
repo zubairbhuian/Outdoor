@@ -48,7 +48,7 @@ class PrimaryBtn extends StatelessWidget {
           backgroundColor: color ?? kPrimaryColor,
           foregroundColor: textColor ?? kWhite,
           padding:
-              padding ?? EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              padding ?? const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 8),
           ),
@@ -103,7 +103,7 @@ class OutLineBtn extends StatelessWidget {
             disabledForegroundColor: kWhite,
             disabledBackgroundColor: kDisabledColor,
             textStyle: textStyle ??
-                TextStyle(
+                const TextStyle(
                     color: kRed,
                     fontFamily: Fonts.primary,
                     fontSize: 18,
@@ -135,7 +135,7 @@ class GradientBtn extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: 130,
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           vertical: 13,
         ),
         decoration: BoxDecoration(

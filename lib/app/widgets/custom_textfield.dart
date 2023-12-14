@@ -126,7 +126,7 @@ class CustomTextField extends StatelessWidget {
                 // ********** padding ********
                 
                 contentPadding: padding ??
-                    EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                    const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                 // ********** prefixIcon ********
                 prefixIcon: prefixIcon,
                 // ********** suffixIcon ********
@@ -212,7 +212,7 @@ class CustomDropdownTextFiel extends StatelessWidget {
                   const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
               filled: true,
               fillColor: kWhite,
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                   color: kTextColor,
                   fontSize: 16) // Set the background color here
               ),

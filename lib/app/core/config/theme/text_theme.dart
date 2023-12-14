@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'style.dart';
 
-  TextTheme kTextTheme = TextTheme(
+  TextTheme kTextTheme = const TextTheme(
     // !headline is here
     headlineLarge:kHeadlineLarge,
     headlineMedium: kHeadlineMedium,

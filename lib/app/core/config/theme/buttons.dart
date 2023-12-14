@@ -13,7 +13,7 @@ class Buttons {
     disabledForegroundColor: kDisabledTextColor,
     disabledBackgroundColor: kDisabledColor,
     surfaceTintColor: kWhite,
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
         color: kRed,
         fontFamily: Fonts.primary,
         fontSize: 18,

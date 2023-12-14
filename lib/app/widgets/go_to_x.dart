@@ -14,7 +14,7 @@ class GOTOX extends StatelessWidget {
       child: RichText(
         text: TextSpan(
           text: text1,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w400,
             color: kTextColor,
@@ -24,7 +24,7 @@ class GOTOX extends StatelessWidget {
               recognizer: TapGestureRecognizer()
                 ..onTap = onTap,
               text: text2,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
                 color: kPrimaryColor,

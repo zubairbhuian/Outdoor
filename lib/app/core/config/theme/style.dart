@@ -1,60 +1,59 @@
 import 'package:outdoor/app/core/config/theme/color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 // ******** Headline **********
-TextStyle kHeadlineLarge = TextStyle(
+TextStyle kHeadlineLarge = const TextStyle(
   color: kTitleColor,
-  fontSize: 32.sp,
+  fontSize: 32,
   fontWeight: FontWeight.w700,
 );
-TextStyle kHeadlineMedium = TextStyle(
+TextStyle kHeadlineMedium = const TextStyle(
   color: kTitleColor,
-  fontSize: 24.sp,
+  fontSize: 24,
   fontWeight: FontWeight.w700,
 );
-TextStyle headlineSmall = TextStyle(
+TextStyle headlineSmall = const TextStyle(
   color: kTitleColor,
-  fontSize: 18.sp,
+  fontSize: 18,
   fontWeight: FontWeight.w700,
 );
 // ******* title ***********
-TextStyle kTitleLarge = TextStyle(
+TextStyle kTitleLarge = const TextStyle(
   color: kTextColor,
-  fontSize: 20.sp,
+  fontSize: 20,
   fontWeight: FontWeight.w600,
 );
-TextStyle kTitleMedium = TextStyle(
+TextStyle kTitleMedium = const TextStyle(
   color: kTitleColor,
-  fontSize: 18.sp,
+  fontSize: 18,
   fontWeight: FontWeight.w600,
 );
-TextStyle kTitleSmall = TextStyle(
+TextStyle kTitleSmall = const TextStyle(
   color: kTitleColor,
-  fontSize: 16.sp,
+  fontSize: 16,
   fontWeight: FontWeight.w600,
 );
 // ******* body ********
-TextStyle kBodyLarge = TextStyle(
-    color: kTextColor, fontSize: 16.sp, fontWeight: FontWeight.w400);
+TextStyle kBodyLarge = const TextStyle(
+    color: kTextColor, fontSize: 16, fontWeight: FontWeight.w400);
 TextStyle kBodyMedium =
-    TextStyle(color: kTextColor, fontSize: 14.sp, fontWeight: FontWeight.w400);
+    const TextStyle(color: kTextColor, fontSize: 14, fontWeight: FontWeight.w400);
 TextStyle kBodySmall =
-    TextStyle(color: kTextColor, fontSize: 12.sp, fontWeight: FontWeight.w400);
+    const TextStyle(color: kTextColor, fontSize: 12, fontWeight: FontWeight.w400);
 // label
-TextStyle kLabelLarge = TextStyle(
+TextStyle kLabelLarge = const TextStyle(
   color: kTextColor,
-  fontSize: 16.sp,
+  fontSize: 16,
   fontWeight: FontWeight.w600,
 );
-TextStyle kLabelMedium = TextStyle(
+TextStyle kLabelMedium = const TextStyle(
   color: kTextColor,
-  fontSize: 14.sp,
+  fontSize: 14,
   fontWeight: FontWeight.w600,
 );
-TextStyle kLabelSmall = TextStyle(
+TextStyle kLabelSmall = const TextStyle(
   color: kTextColor,
-  fontSize: 12.sp,
+  fontSize: 12,
   fontWeight: FontWeight.w600,
 );

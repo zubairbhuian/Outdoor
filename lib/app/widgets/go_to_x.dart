@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:outdoor/app/core/config/theme/color.dart';
 
 class GOTOX extends StatelessWidget {
@@ -16,7 +15,7 @@ class GOTOX extends StatelessWidget {
         text: TextSpan(
           text: text1,
           style: TextStyle(
-            fontSize: 16.sp,
+            fontSize: 16,
             fontWeight: FontWeight.w400,
             color: kTextColor,
           ),
@@ -26,7 +25,7 @@ class GOTOX extends StatelessWidget {
                 ..onTap = onTap,
               text: text2,
               style: TextStyle(
-                fontSize: 16.sp,
+                fontSize: 16,
                 fontWeight: FontWeight.w600,
                 color: kPrimaryColor,
               ),

@@ -3,7 +3,7 @@ import 'package:outdoor/app/core/config/theme/color.dart';
 import 'package:outdoor/app/core/config/fonts.dart';
 import 'package:outdoor/app/core/config/theme/style.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class PrimaryBtn extends StatelessWidget {
   final Color? color;
@@ -48,9 +48,9 @@ class PrimaryBtn extends StatelessWidget {
           backgroundColor: color ?? kPrimaryColor,
           foregroundColor: textColor ?? kWhite,
           padding:
-              padding ?? EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+              padding ?? EdgeInsets.symmetric(vertical: 20, horizontal: 20),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius ?? 8.r),
+            borderRadius: BorderRadius.circular(borderRadius ?? 8),
           ),
           // ****** Border color *******
           side:side
@@ -106,7 +106,7 @@ class OutLineBtn extends StatelessWidget {
                 TextStyle(
                     color: kRed,
                     fontFamily: Fonts.primary,
-                    fontSize: 18.sp,
+                    fontSize: 18,
                     fontWeight: FontWeight.w500),
             // shape: RoundedRectangleBorder(
             //   borderRadius: BorderRadius.circular(
@@ -134,9 +134,9 @@ class GradientBtn extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 130.sw,
+        width: 130,
         padding: EdgeInsets.symmetric(
-          vertical: 13.h,
+          vertical: 13,
         ),
         decoration: BoxDecoration(
           gradient: onTap == null

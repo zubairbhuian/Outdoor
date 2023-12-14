@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:outdoor/app/core/config/theme/color.dart';
+import 'package:outdoor/app/core/config/theme/style.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../controllers/sign_up_controller.dart';
@@ -25,7 +26,7 @@ class SignUpView extends GetView<SignUpController> {
                   width: 50,
                   height: 20,
                 ),
-                subtitle: const Text('Subtitle'),
+                subtitle:  Text('Subtitle',style: kBodyLarge,),
               )),
             ),
           ),

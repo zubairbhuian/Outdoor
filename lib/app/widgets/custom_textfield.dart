@@ -1,7 +1,7 @@
 import 'package:outdoor/app/core/utils/int_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 import '../core/config/theme/color.dart';
 import '../core/config/theme/style.dart';
@@ -126,7 +126,7 @@ class CustomTextField extends StatelessWidget {
                 // ********** padding ********
                 
                 contentPadding: padding ??
-                    EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
+                    EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                 // ********** prefixIcon ********
                 prefixIcon: prefixIcon,
                 // ********** suffixIcon ********
@@ -189,7 +189,7 @@ class CustomDropdownTextFiel extends StatelessWidget {
             label ?? "",
             style: kLabelMedium,
           ),
-        SizedBox(height: label == null ? 0 : 8.h),
+        SizedBox(height: label == null ? 0 : 8),
         DropdownButtonFormField<String>(
           hint: hint ??
               Text(
@@ -200,13 +200,13 @@ class CustomDropdownTextFiel extends StatelessWidget {
           dropdownColor: kWhite,
           decoration: InputDecoration(
               border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.r),
+                  borderRadius: BorderRadius.circular(8),
                   borderSide: const BorderSide(color: kDisabledTextColor)),
               focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.r),
+                  borderRadius: BorderRadius.circular(8),
                   borderSide: const BorderSide(color: kDisabledTextColor)),
               enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.r),
+                  borderRadius: BorderRadius.circular(8),
                   borderSide: const BorderSide(color: kDisabledTextColor)),
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
@@ -214,7 +214,7 @@ class CustomDropdownTextFiel extends StatelessWidget {
               fillColor: kWhite,
               hintStyle: TextStyle(
                   color: kTextColor,
-                  fontSize: 16.sp) // Set the background color here
+                  fontSize: 16) // Set the background color here
               ),
           items: List.generate(
               data.length,
@@ -261,14 +261,14 @@ class CustomTextWithLabel extends StatelessWidget {
               overflow: overflow,
               style: TextStyle(
                   color: color ?? kTextColor,
-                  fontSize: fontSize ?? 14.sp,
+                  fontSize: fontSize ?? 14,
                   fontWeight: fontWeight ?? FontWeight.w500)),
           Text(text2,
               textAlign: textAlign ?? TextAlign.start,
               overflow: overflow,
               style: TextStyle(
                   color: color ?? kTextColor,
-                  fontSize: fontSize ?? 14.sp,
+                  fontSize: fontSize ?? 14,
                   fontWeight: fontWeight ?? FontWeight.w500)),
         ],
       );

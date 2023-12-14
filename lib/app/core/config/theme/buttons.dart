@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:outdoor/app/core/config/fonts.dart';
 import 'package:outdoor/app/core/config/theme/color.dart';
 
@@ -17,7 +16,7 @@ class Buttons {
     textStyle: TextStyle(
         color: kRed,
         fontFamily: Fonts.primary,
-        fontSize: 18.sp,
+        fontSize: 18,
         fontWeight: FontWeight.w500),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(8), // Change the border radius value

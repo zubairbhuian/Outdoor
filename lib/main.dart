@@ -26,14 +26,15 @@ Future<void> main() async {
   // Status Bar Color
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: kPrimaryColor,
-    statusBarIconBrightness: Brightness.dark,
+    statusBarIconBrightness: Brightness.light,
   ));
+
   /// Shared Preferences
   await Preferences.init();
 
   /// Initialize the dio
   final dio = Dio();
-  
+
   // Initialize the dio instance
   dio.interceptors.add(DioInterceptor());
 

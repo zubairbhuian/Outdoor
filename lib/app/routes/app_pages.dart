@@ -1,13 +1,13 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:get/get.dart';
+import 'package:outdoor/app/modules/signIn/bindings/sign_in_binding.dart';
+import 'package:outdoor/app/modules/signIn/views/sign_in_view.dart';
 
 import '../modules/application/bindings/application_binding.dart';
 import '../modules/application/views/application_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/login/bindings/login_binding.dart';
-import '../modules/login/views/login_view.dart';
 import '../modules/signUp/bindings/sign_up_binding.dart';
 import '../modules/signUp/views/sign_up_view.dart';
 import '../modules/vefificationCode/bindings/vefification_code_binding.dart';
@@ -34,9 +34,9 @@ class AppPages {
       binding: SignUpBinding(),
     ),
     GetPage(
-      name: _Paths.LOGIN,
-      page: () => const LoginView(),
-      binding: LoginBinding(),
+      name: _Paths.SIGN_IN,
+      page: () => const SignInView(),
+      binding: SignInBinding(),
     ),
     GetPage(
       name: _Paths.VEFIFICATION_CODE,

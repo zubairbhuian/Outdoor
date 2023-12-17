@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // ******** Headline **********
 const TextStyle kHeadlineLarge = TextStyle(
   color: kTitleColor,
-  fontSize: 32,
+  fontSize: 54,
   fontWeight: FontWeight.w700,
 );
 const TextStyle kHeadlineMedium = TextStyle(

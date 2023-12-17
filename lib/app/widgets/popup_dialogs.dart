@@ -1,3 +1,4 @@
+
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +59,7 @@ class PopupDialog {
                   // border radius
                   borderRadius: BorderRadius.circular(8),
                   // main body
-                  child: const SpinKitFadingCircle(
+                  child: SpinKitFadingCircle(
                     color: kPrimaryColor, // You can customize the color
                     size: 43, // You can customize the size
                   ),
@@ -89,7 +90,7 @@ class PopupDialog {
             // for ertical minWidth
             Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
+                padding: EdgeInsets.symmetric(horizontal: 25),
                 child: SizedBox(
                   width: double.infinity,
                   child: Material(
@@ -102,7 +103,7 @@ class PopupDialog {
                     borderRadius: BorderRadius.circular(12),
                     // main body
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(
+                      padding: EdgeInsets.symmetric(
                           horizontal: 20, vertical: 26),
                       child: Column(
                         children: [
@@ -114,7 +115,7 @@ class PopupDialog {
                           ),
                           24.height,
                           // title
-                          const Text(
+                          Text(
                             "Are you sure you want to logout?",
                             style: kTitleLarge,
                             textAlign: TextAlign.center,
@@ -169,7 +170,7 @@ class PopupDialog {
             // for ertical minWidth
             Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
+                padding: EdgeInsets.symmetric(horizontal: 24),
                 child: SizedBox(
                   width: double.infinity,
                   child: Material(
@@ -182,7 +183,7 @@ class PopupDialog {
                     borderRadius: BorderRadius.circular(12),
                     // main body
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(
+                      padding: EdgeInsets.symmetric(
                           horizontal: 32, vertical: 32),
                       child: Column(
                         children: [
@@ -190,7 +191,7 @@ class PopupDialog {
                           Image.asset(
                             'assets/gif/Congratulations.gif',
                             width: 128,
-                            height: 128
+                            height: 128,
                           ),
                           // title
                           Text(

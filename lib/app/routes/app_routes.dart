@@ -8,7 +8,7 @@ abstract class Routes {
   
   static const WELCOME = _Paths.WELCOME;
   static const SIGN_UP = _Paths.SIGN_UP;
-  static const LOGIN = _Paths.LOGIN;
+  static const SIGN_IN = _Paths.SIGN_IN;
   static const VEFIFICATION_CODE = _Paths.VEFIFICATION_CODE;
   static const APPLICATION = _Paths.APPLICATION;
   static const HOME = _Paths.HOME;
@@ -19,7 +19,7 @@ abstract class _Paths {
 
   static const WELCOME = '/welcome';
   static const SIGN_UP = '/sign-up';
-  static const LOGIN = '/login';
+  static const SIGN_IN = '/login';
   static const VEFIFICATION_CODE = '/vefification-code';
   static const APPLICATION = '/application';
   static const HOME = '/home';

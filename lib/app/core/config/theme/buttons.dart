@@ -19,7 +19,7 @@ class Buttons {
         fontSize: 18,
         fontWeight: FontWeight.w500),
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(8), // Change the border radius value
+      borderRadius: BorderRadius.circular(27), // Change the border radius value
     ),
   ));
 }

@@ -55,12 +55,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.cupertino,
       transitionDuration: const Duration(milliseconds: 500),
-      title: 'OutDoor',
+      title: 'Food Hub',
       theme: theme,
       initialBinding: BaseBinding(
         apiService: apiService,
       ),
-      initialRoute: AppPages.INITIAL,
+      // initialRoute: AppPages.INITIAL,
+      initialRoute: Routes.SIGN_IN,
       getPages: AppPages.routes,
     );
   }

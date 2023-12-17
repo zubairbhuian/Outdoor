@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:outdoor/app/core/utils/int_extensions.dart';
 
-
 import '../../../core/config/theme/color.dart';
 import '../../../core/config/theme/style.dart';
 import '../../../core/utils/icons.dart';
@@ -11,11 +10,11 @@ import '../../../routes/app_pages.dart';
 import '../../../widgets/divider_text.dart';
 import '../../../widgets/go_to_x.dart';
 import '../../../widgets/popup_dialogs.dart';
-import '../controllers/sign_up_controller.dart';
-import '../widgets/sign_up_form.dart';
+import '../controllers/sign_in_controller.dart';
+import '../widgets/sign_in_form.dart';
 
-class SignUpView extends GetView<SignUpController> {
-  const SignUpView({Key? key}) : super(key: key);
+class SignInView extends GetView<SignInController> {
+  const SignInView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +24,7 @@ class SignUpView extends GetView<SignUpController> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            "Sign up",
+            "Sign in",
             style: kTitleLarge,
           ),
           24.height,
@@ -44,18 +43,25 @@ class SignUpView extends GetView<SignUpController> {
           )),
           40.height,
           //form
-          const SignUpForm(),
-          16.height,
+          const SignInForm(),
+          // forget pass
+          Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                "Forgot Password?",
+                style: kTitleSmall.copyWith(color: kPrimaryColor),
+              )),
+          32.height,
           // Sign up btn
           SizedBox(
             width: double.infinity,
             child: Builder(builder: (context) {
-              return GetBuilder<SignUpController>(builder: (controller) {
-                bool isReady = controller.isReadyToSignUp;
+              return GetBuilder<SignInController>(builder: (controller) {
+                bool isReady = controller.isReadyToSignin;
                 return ElevatedButton(
                   onPressed: isReady
                       ? () {
-                          controller.onSignUp();
+                          controller.onSignIn();
                         }
                       : null,
                   child: const Text(
@@ -110,14 +116,13 @@ class SignUpView extends GetView<SignUpController> {
             ],
           ),
           40.height,
-    
           // go to sign in
           GOTOX(
               onTap: () {
-                Get.offAllNamed(Routes.SIGN_IN);
+                Get.offAllNamed(Routes.SIGN_UP);
               },
-              text1: "Already have an account? ",
-              text2: "Sign in"),
+              text1: "Don’t have any account? ",
+              text2: "Register Now"),
           20.height
         ],
       ),

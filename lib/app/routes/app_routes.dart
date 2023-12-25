@@ -5,13 +5,12 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  
+
   static const WELCOME = _Paths.WELCOME;
   static const SIGN_UP = _Paths.SIGN_UP;
   static const SIGN_IN = _Paths.SIGN_IN;
   static const VEFIFICATION_CODE = _Paths.VEFIFICATION_CODE;
-  static const APPLICATION = _Paths.APPLICATION;
-  static const HOME = _Paths.HOME;
+  static const ENTRY_POINT = _Paths.ENTRY_POINT;
 }
 
 abstract class _Paths {
@@ -21,6 +20,5 @@ abstract class _Paths {
   static const SIGN_UP = '/sign-up';
   static const SIGN_IN = '/login';
   static const VEFIFICATION_CODE = '/vefification-code';
-  static const APPLICATION = '/application';
-  static const HOME = '/home';
+  static const ENTRY_POINT = '/entry-point';
 }

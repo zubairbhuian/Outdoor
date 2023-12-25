@@ -52,7 +52,7 @@ class SignUpController extends GetxController {
               .makePostRequestWithFormData(Urls.verifyOTP, formData2);
           if (res2.statusCode == 200 || res2.statusCode == 201) {
             Preferences.isUserSignin = true;
-            Get.offAllNamed(Routes.APPLICATION);
+            Get.offAllNamed(Routes.ENTRY_POINT);
             PopupDialog.closeLoadingDialog();
             Future.delayed(const Duration(seconds: 2), () {
               PopupDialog.congratulationsDialog();

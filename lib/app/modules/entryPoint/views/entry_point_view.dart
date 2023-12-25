@@ -2,24 +2,37 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:outdoor/app/core/config/theme/color.dart';
+import 'package:outdoor/app/core/utils/logger.dart';
 import 'package:outdoor/app/core/utils/rive_utils.dart';
 import 'package:outdoor/app/data/models/menu.dart';
-import 'package:outdoor/app/modules/home/views/home.dart';
+import 'package:outdoor/app/modules/EntryPoint/components/btm_nav_item.dart';
+import 'package:outdoor/app/modules/EntryPoint/components/menu_btn.dart';
+import 'package:outdoor/app/modules/EntryPoint/components/side_bar.dart';
+import 'package:outdoor/app/modules/entryPoint/views/favorites_view.dart';
+import 'package:outdoor/app/modules/entryPoint/views/home_view.dart';
+import 'package:outdoor/app/modules/entryPoint/views/order_view.dart';
+import 'package:outdoor/app/modules/entryPoint/views/profile_view.dart';
+import 'package:outdoor/app/modules/entryPoint/views/search_view.dart';
 import 'package:rive/rive.dart';
-import 'components/btm_nav_item.dart';
-import 'components/menu_btn.dart';
-import 'components/side_bar.dart';
 
-class EntryPoint extends StatefulWidget {
-  const EntryPoint({super.key});
+class EntryPointView extends StatefulWidget {
+  const EntryPointView({super.key});
 
   @override
-  State<EntryPoint> createState() => _EntryPointState();
+  State<EntryPointView> createState() => _EntryPointViewState();
 }
 
-class _EntryPointState extends State<EntryPoint>
+class _EntryPointViewState extends State<EntryPointView>
     with SingleTickerProviderStateMixin {
   bool isSideBarOpen = false;
+  int pageIndex = 0;
+  List<Widget> pages = [
+    const HomeView(),
+    const FavoritesView(),
+    const OrderView(),
+    const SearchView(),
+    const ProfileView()
+  ];
 
   Menu selectedBottonNav = bottomNavItems.first;
   Menu selectedSideMenu = sidebarMenus.first;
@@ -65,7 +78,7 @@ class _EntryPointState extends State<EntryPoint>
     return Scaffold(
       extendBody: true,
       resizeToAvoidBottomInset: false,
-      backgroundColor: kBlack,
+      backgroundColor:kWhite,
       body: Stack(
         children: [
           AnimatedPositioned(
@@ -87,11 +100,11 @@ class _EntryPointState extends State<EntryPoint>
               offset: Offset(animation.value * 265, 0),
               child: Transform.scale(
                 scale: scalAnimation.value,
-                child: const ClipRRect(
-                  borderRadius: BorderRadius.all(
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(24),
                   ),
-                  child: Home(),
+                  child: pages[pageIndex],
                 ),
               ),
             ),
@@ -133,43 +146,46 @@ class _EntryPointState extends State<EntryPoint>
       ),
       bottomNavigationBar: Transform.translate(
         offset: Offset(0, 100 * animation.value),
-        child: Container(
-          padding:
-              const EdgeInsets.only(left: 12, top: 12, right: 12, bottom: 12),
-          margin: const EdgeInsets.symmetric(horizontal: 24),
-          decoration: const BoxDecoration(
-            color: kPrimaryColor,
-            borderRadius: BorderRadius.all(Radius.circular(24)),
-            boxShadow: [
-              BoxShadow(
-                color: kPrimaryColor,
-                offset: Offset(0, 20),
-                blurRadius: 20,
-              ),
-            ],
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              ...List.generate(
-                bottomNavItems.length,
-                (index) {
-                  Menu navBar = bottomNavItems[index];
-                  return BtmNavItem(
-                    navBar: navBar,
-                    press: () {
-                      RiveUtils.chnageSMIBoolState(navBar.rive.status!);
-                      updateSelectedBtmNav(navBar);
-                    },
-                    riveOnInit: (artboard) {
-                      navBar.rive.status = RiveUtils.getRiveInput(artboard,
-                          stateMachineName: navBar.rive.stateMachineName);
-                    },
-                    selectedNav: selectedBottonNav,
-                  );
-                },
-              ),
-            ],
+        child: SafeArea(
+          child: Container(
+            padding:
+                const EdgeInsets.only(left: 12, top: 12, right: 12, bottom: 12),
+            margin: const EdgeInsets.symmetric(horizontal: 24),
+            decoration: const BoxDecoration(
+              color: kPrimaryColor,
+              borderRadius: BorderRadius.all(Radius.circular(24)),
+              boxShadow: [
+                BoxShadow(
+                  color: kPrimaryColor,
+                  offset: Offset(0, 20),
+                  blurRadius: 20,
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ...List.generate(
+                  bottomNavItems.length,
+                  (index) {
+                    Menu navBar = bottomNavItems[index];
+                    return BtmNavItem(
+                      navBar: navBar,
+                      press: () {
+                        pageIndex = index;
+                        RiveUtils.chnageSMIBoolState(navBar.rive.status!);
+                        updateSelectedBtmNav(navBar);
+                      },
+                      riveOnInit: (artboard) {
+                        navBar.rive.status = RiveUtils.getRiveInput(artboard,
+                            stateMachineName: navBar.rive.stateMachineName);
+                      },
+                      selectedNav: selectedBottonNav,
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),

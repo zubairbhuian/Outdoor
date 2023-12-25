@@ -1,19 +1,17 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:get/get.dart';
-import 'package:outdoor/app/modules/signIn/bindings/sign_in_binding.dart';
-import 'package:outdoor/app/modules/signIn/views/sign_in_view.dart';
 
-import '../modules/application/bindings/application_binding.dart';
-import '../modules/application/views/application_view.dart';
-import '../modules/home/bindings/home_binding.dart';
-import '../modules/home/views/home_view.dart';
+import '../modules/entryPoint/bindings/entry_point_binding.dart';
+import '../modules/entryPoint/views/entry_point_view.dart';
+import '../modules/signIn/bindings/sign_in_binding.dart';
+import '../modules/signIn/views/sign_in_view.dart';
 import '../modules/signUp/bindings/sign_up_binding.dart';
 import '../modules/signUp/views/sign_up_view.dart';
 import '../modules/vefificationCode/bindings/vefification_code_binding.dart';
 import '../modules/vefificationCode/views/vefification_code_view.dart';
 import '../modules/welcome/bindings/welcome_binding.dart';
 import '../modules/welcome/views/welcome_view.dart';
+
+// ignore_for_file: constant_identifier_names
 
 part 'app_routes.dart';
 
@@ -44,14 +42,9 @@ class AppPages {
       binding: VefificationCodeBinding(),
     ),
     GetPage(
-      name: _Paths.APPLICATION,
-      page: () => const ApplicationView(),
-      binding: ApplicationBinding(),
-    ),
-    GetPage(
-      name: _Paths.HOME,
-      page: () => const HomeView(),
-      binding: HomeBinding(),
+      name: _Paths.ENTRY_POINT,
+      page: () => const EntryPointView(),
+      binding: EntryPointBinding(),
     ),
   ];
 }

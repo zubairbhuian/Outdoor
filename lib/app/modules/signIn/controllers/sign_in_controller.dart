@@ -35,7 +35,7 @@ class SignInController extends GetxController {
       kLogger.e(res.data);
       if (res.statusCode == 200 || res.statusCode == 201) {
         Preferences.isUserSignin = true;
-        Get.offAllNamed(Routes.APPLICATION);
+        Get.offAllNamed(Routes.ENTRY_POINT);
         PopupDialog.closeLoadingDialog();
         Future.delayed(const Duration(seconds: 2), () {
           PopupDialog.congratulationsDialog();

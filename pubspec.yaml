@@ -48,6 +48,7 @@ flutter:
     - assets/icons/
     - assets/svg/
     - assets/svg/auth/
+    - assets/RiveAssets/
 
   fonts:
     - family: Poppins

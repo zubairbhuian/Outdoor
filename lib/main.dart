@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'package:get/get.dart';
+import 'package:outdoor/app/modules/entryPoint/entry_point.dart';
 
 import 'app/core/config/theme/color.dart';
 import 'app/core/config/theme/theme.dart';
@@ -61,8 +62,9 @@ class MyApp extends StatelessWidget {
         apiService: apiService,
       ),
       // initialRoute: AppPages.INITIAL,
-      initialRoute: Routes.APPLICATION,
-      getPages: AppPages.routes,
+      // initialRoute: Routes.APPLICATION,
+      // getPages: AppPages.routes,
+      home: const EntryPoint(),
     );
   }
 }

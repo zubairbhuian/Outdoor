@@ -56,18 +56,11 @@ List<Menu> sidebarMenus2 = [
 
 List<Menu> bottomNavItems = [
   Menu(
-    title: "Chat",
+    title: "Home",
     rive: RiveModel(
         src: "assets/RiveAssets/icons.riv",
-        artboard: "CHAT",
-        stateMachineName: "CHAT_Interactivity"),
-  ),
-  Menu(
-    title: "Search",
-    rive: RiveModel(
-        src: "assets/RiveAssets/icons.riv",
-        artboard: "SEARCH",
-        stateMachineName: "SEARCH_Interactivity"),
+        artboard: "HOME",
+        stateMachineName: "HOME_interactivity"),
   ),
   Menu(
     title: "Timer",
@@ -75,6 +68,13 @@ List<Menu> bottomNavItems = [
         src: "assets/RiveAssets/icons.riv",
         artboard: "TIMER",
         stateMachineName: "TIMER_Interactivity"),
+  ),
+  Menu(
+    title: "Favorites",
+    rive: RiveModel(
+        src: "assets/RiveAssets/icons.riv",
+        artboard: "LIKE/STAR",
+        stateMachineName: "STAR_Interactivity"),
   ),
   Menu(
     title: "Notification",

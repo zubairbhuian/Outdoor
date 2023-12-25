@@ -8,17 +8,20 @@ class HomeView extends GetView {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: SingleChildScrollView(
-        child:Column(
-          children: List.generate(100, (index) =>  Container(
-            color: kRed,
-            child: const Center(
-            child: Text(
-              'HomeView is working',
-              style: TextStyle(fontSize: 20),
-            ),
-                      ),
-          )),
+      body: SafeArea(
+        bottom: false,
+        child: SingleChildScrollView(
+          child:Column(
+            children: List.generate(100, (index) =>  Container(
+              color: kRed,
+              child: const Center(
+              child: Text(
+                'HomeView is working',
+                style: TextStyle(fontSize: 20),
+              ),
+                        ),
+            )),
+          ),
         ),
       ),
     );

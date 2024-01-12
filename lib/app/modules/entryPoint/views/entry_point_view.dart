@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:outdoor/app/core/config/theme/color.dart';
-import 'package:outdoor/app/core/utils/logger.dart';
 import 'package:outdoor/app/core/utils/rive_utils.dart';
 import 'package:outdoor/app/data/models/menu.dart';
 import 'package:outdoor/app/modules/EntryPoint/components/btm_nav_item.dart';
@@ -151,13 +150,13 @@ class _EntryPointViewState extends State<EntryPointView>
             padding:
                 const EdgeInsets.only(left: 12, top: 12, right: 12, bottom: 12),
             margin: const EdgeInsets.symmetric(horizontal: 24),
-            decoration: const BoxDecoration(
+            decoration:  BoxDecoration(
               color: kPrimaryColor,
-              borderRadius: BorderRadius.all(Radius.circular(24)),
+              borderRadius: const BorderRadius.all(Radius.circular(24)),
               boxShadow: [
                 BoxShadow(
-                  color: kPrimaryColor,
-                  offset: Offset(0, 20),
+                  color: kPrimaryColor.withOpacity(.6),
+                  offset: const Offset(0, 20),
                   blurRadius: 20,
                 ),
               ],
